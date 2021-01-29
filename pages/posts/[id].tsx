@@ -18,7 +18,7 @@ const Post = ({ posts, comments }) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>Post</title>
       </Head>
       <TopBar />
       <PostItem {...post} comments={actualComments}/>
