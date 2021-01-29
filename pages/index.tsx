@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Layout  from '../components/layout';
+import Layout  from '../components/Layout';
 import Loader from '../components/loader';
 import { Posts } from "../components/posts/posts";
 
