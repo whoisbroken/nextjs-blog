@@ -1,15 +1,29 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React from 'react';
+import Head from 'next/head';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+import Layout  from '../components/layout';
+import Loader from '../components/loader';
+import { Posts } from "../components/posts/posts";
 
-export default IndexPage
+import { useFetchPostData } from "../customHook/useFetchPostData";
+
+const Home = () => {  
+  const { posts, loading } = useFetchPostData();
+
+  return (
+    <>
+      <Head>
+        <title>Blog</title>
+      </Head>
+      <Layout />
+      {loading ? (
+        <Loader />
+        ) : (
+        <Posts posts={posts} />
+        )
+      }
+    </>
+  );
+}
+
+export default Home
