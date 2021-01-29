@@ -2,11 +2,9 @@ import { DATA_ACTIONS } from "./actionTypes";
 
 const fetchPostsStart = { type: DATA_ACTIONS.FETCH_POSTS_START };
 const fetchPostsSuccess = { type: DATA_ACTIONS.FETCH_POSTS_SUCCESS };
-const fetchPostsError = { type: DATA_ACTIONS.FETCH_POSTS_ERROR };
 
 const fetchCommentsStart = { type: DATA_ACTIONS.FETCH_COMMENTS_START };
 const fetchCommentsSuccess = { type: DATA_ACTIONS.FETCH_COMMENTS_SUCCESS };
-const fetchCommentsError = { type: DATA_ACTIONS.FETCH_COMMENTS_ERROR };
 
 // fetch data
 export const fetchPosts = () => async (dispatch) => {

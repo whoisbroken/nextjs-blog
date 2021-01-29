@@ -12,7 +12,7 @@ const newPost = () => {
   
   const [title, setTitle] = React.useState("");
   const [body, setBody] = React.useState("");
-  const [id, setId] = React.useState(Math.floor(100 + Math.random() * (200 - 100)));
+  const [id] = React.useState(Math.floor(100 + Math.random() * (200 - 100)));
   const [error, setError] = React.useState(false);
 
   const dispatch = useDispatch();
