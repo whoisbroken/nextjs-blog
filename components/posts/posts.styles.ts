@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.main`
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px 0;
-    color: #000;
+import { Container } from "../_styled/container";
+
+export const PostsContainer = styled(Container)`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 16px;
 `;
 
 export const PostTitle = styled.h2`
-    color: #333;
     margin-bottom: 15px;
     font-size: 22px;
     line-height: 1.4;
@@ -16,42 +16,33 @@ export const PostTitle = styled.h2`
 `;
 
 export const Post = styled.article`
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    margin-bottom: 20px;
+    flex: 1 1 301px;
+    padding: 20px 20px 40px;
+    min-height: 220px;
     text-align: center;
-    @media (min-width: 768px) {
-        text-align: left;
-        width: 50%;
+    border-bottom: 1px solid #eaeff1;
+    cursor: pointer;
+
+    @media (max-width: 650px) {
+        padding: 10px 10px 20px;
     }
-    @media (min-width: 1140px) {
-        width: 30%;
-        margin-right: 40px;
-        margin-bottom: 20px;
+
+    &:nth-child(4n) {
+        flex: 1 1 100%;
     }
-    &:nth-child(3n) {
+
+    &:nth-child(10n),
+    &:nth-child(11n) {
         margin-right: 0;
+        flex: 1 1 41%;  
     }
 `;
 
 
-
-
 export const PostBody = styled.p`
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #333;
-    font-size: 15px;
-    max-width: 400px;
-    margin: 0 auto;
+    font-size: 16px;
+    color: ${({ theme }) => theme.palette.midGrey};
     @media (min-width: 768px) {
         margin: 0;
-    }
-    @media (min-width: 1140px) {
-        max-width: 400px;
     }
 `;

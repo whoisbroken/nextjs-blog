@@ -1,11 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-import { TopBarContainer,TopBarLogo,
-        TopBarNav, TopBarLink } from "./topbar.styles";
+import {
+  TopBarStyles, TopBarContainer, TopBarLogo,
+  TopBarNav
+} from "./topbar.styles";
 
 const TopBar = () => {
   return (
+    <TopBarStyles>
       <TopBarContainer>
         <TopBarLogo>
           <Link href="/">
@@ -13,13 +16,12 @@ const TopBar = () => {
           </Link>
         </TopBarLogo>
         <TopBarNav>
-          <TopBarLink>
-            <Link href="/posts/new">
-              New post
-            </Link>
-          </TopBarLink>
+          <Link href="/posts/new">
+            New post
+          </Link>
         </TopBarNav>
       </TopBarContainer>
+    </TopBarStyles>
   );
 };
 

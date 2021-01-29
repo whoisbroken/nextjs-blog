@@ -3,6 +3,7 @@ import Head from 'next/head';
 import axios from 'axios';
 
 import { PostItem } from '../../components/post-item/post-item';
+import TopBar from '../../components/topbar/topbar';
 
 export default function Post({ data }) {
   return (
@@ -10,6 +11,7 @@ export default function Post({ data }) {
       <Head>
         <title>{data.title}</title>
       </Head>
+      <TopBar />
       <PostItem {...data} />
     </>
   );

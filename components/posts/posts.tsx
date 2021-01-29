@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Post, PostBody, PostTitle, Wrapper } from './posts.styles';
+import { Post, PostBody, 
+        PostTitle, PostsContainer } from './posts.styles';
 
 interface Post {
   title: string;
@@ -14,7 +15,7 @@ interface Props {
 
 export const Posts = ({ posts }: Props) => {
   return (
-    <Wrapper>
+    <PostsContainer>
       {posts
         .filter((item) => item.title && item.body)
         .map((item) => {
@@ -27,6 +28,6 @@ export const Posts = ({ posts }: Props) => {
             </Link>
           );
         })}
-    </Wrapper>
+    </PostsContainer>
   );
 };

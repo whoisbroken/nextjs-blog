@@ -1,6 +1,5 @@
 import React from 'react';
-import { Body, Comments, Comment, Title, Wrap } from './post-item.styles';
-import Link from 'next/link';
+import { Body, Comments, Comment, Title, PostItemContainer } from './post-item.styles';
 
 interface Comment {
   id: number;
@@ -15,10 +14,7 @@ export interface PostInterface {
 
 export const PostItem = ({ title, body, comments }: PostInterface) => {
   return (
-    <Wrap key={title}>
-      <Link href="/">
-        <a>Back to home</a>
-      </Link>
+    <PostItemContainer key={title}>
       <Title>{title}</Title>
       <Body>{body}</Body>
       <Comments>Comments:</Comments>
@@ -30,6 +26,6 @@ export const PostItem = ({ title, body, comments }: PostInterface) => {
           <Comment>Unfortunately there are no comments yet on this article.</Comment>
         )
       }
-    </Wrap>
+    </PostItemContainer>
   );
 };
