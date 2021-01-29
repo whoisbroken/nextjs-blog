@@ -12,7 +12,7 @@ const TopBar = () => {
       <TopBarContainer>
         <TopBarLogo>
           <Link href="/">
-            Blog
+            <a>Blog</a>
           </Link>
         </TopBarLogo>
         <TopBarNav>

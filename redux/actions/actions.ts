@@ -17,7 +17,7 @@ export const fetchPosts = () => async (dispatch) => {
 };
 
 // add posts
-export const addPost = (title, body) => ({
+export const addPost = (title, body, id) => ({
   type: DATA_ACTIONS.ADD_POST,
-  payload: {title, body}
+  payload: {title, body, id}
 });

@@ -16,9 +16,6 @@ export const PostItemContainer = styled(Container)`
         padding-right: 5vw;
         padding-left: 5vw;
     }
-    
-
-
 `;
 
 export const Title = styled.h2`

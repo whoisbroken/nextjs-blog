@@ -10,7 +10,8 @@ export const PostsContainer = styled(Container)`
 
 export const PostTitle = styled.h2`
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1.4;
     word-break: break-word;
 `;

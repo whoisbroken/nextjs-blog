@@ -25,7 +25,10 @@ export const postReducer = (state = initialState, action) => {
     case DATA_ACTIONS.ADD_POST:
       return {
         ...state,
-        posts: [...state.posts, action.payload],
+        posts: [
+          ...state.posts,
+           action.payload,
+        ],
         loading: false,
       };
     default:

@@ -10,11 +10,12 @@ export interface PostInterface {
   title: string;
   body: string;
   comments: Array<Comment>;
+  id: number,
 }
 
-export const PostItem = ({ title, body, comments }: PostInterface) => {
+export const PostItem = ({ title, body, comments, id }: PostInterface) => {
   return (
-    <PostItemContainer key={title}>
+    <PostItemContainer key={id}>
       <Title>{title}</Title>
       <Body>{body}</Body>
       <Comments>Comments:</Comments>
